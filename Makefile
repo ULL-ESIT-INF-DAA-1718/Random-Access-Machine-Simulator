@@ -7,11 +7,13 @@ BINARY = ram-simulator
 
 IDIR = include
 ODIR = obj
+TDIR = test/test-main
+TEXEDIR = test/test-exec
 
-_DEPS = 
+_DEPS = data-memory.h
 DEPS = $(patsubst %, $(IDIR)/%, $(_DEPS))
 
-_OBJ = main.o
+_OBJ = data-memory.o
 OBJ = $(patsubst %, $(ODIR)/%, $(_OBJ))
 
 CXXFLAGS = -g -std=c++14 -I$(IDIR)
@@ -30,6 +32,17 @@ $(ODIR)/%.o: src/%.cc $(DEPS)
 $(BINARY): $(OBJ)
 		$(CXX) -o $@ $^ $(CXXFLAGS)
 
+
+# Data Memory test
+
+$(ODIR)/data-main.o: $(TDIR)/data-main.cc $(ODIR)/data-memory.o
+	@if [ ! -d $(ODIR) ]; then mkdir $(ODIR); fi
+
+	$(CXX) -c -o $@ $< $(CXXFLAGS)
+
+data-mem: $(ODIR)/data-main.o $(ODIR)/data-memory.o
+	$(CXX) -o $(TEXEDIR)/$@ $^ $(CXXFLAGS)
+	
 clean:
 	rm -f $(ODIR)/*.o $(BINARY)
 	rm -r $(ODIR)

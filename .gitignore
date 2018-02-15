@@ -12,3 +12,6 @@
 .cproject
 .project
 .DS_Store
+obj/
+ram-simulator
+test/test-exec
