@@ -12,6 +12,4 @@
 .cproject
 .project
 .DS_Store
-obj/
-ram-simulator
-test/test-exec
+cmake-build-debug/*
