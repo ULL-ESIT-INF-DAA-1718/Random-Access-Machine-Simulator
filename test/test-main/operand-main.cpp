@@ -5,7 +5,7 @@
 #include <iostream>
 #include "operand.h"
 
-int main(void) {
+int main() {
 
   std::cout << "Operand Test" << '\n';
 
@@ -29,9 +29,20 @@ int main(void) {
     std::cout << "value: " << iop.get_value() << '\n';
     std::cout << "type: " << (iop.get_type() == INDIRECT_ADDR) << '\n';
 
+    // Operand bad_op("");
+    // std::cout << bad_op << '\n';
+
+    Operand zero("0");
+    std::cout << zero.empty() << '\n';
+
+    Operand empty;
+    std::cout << empty.empty() << '\n';
   }
   catch (std::invalid_argument &e) {
-    std::cerr << "Error en la línea " << e.what() << std::endl;
+    std::cerr << "Error en la línea : " << e.what() << std::endl;
+  }
+  catch (std::length_error &e) {
+    std::cerr << "Error en la línea : " << e.what() << std::endl;
   }
 
 }

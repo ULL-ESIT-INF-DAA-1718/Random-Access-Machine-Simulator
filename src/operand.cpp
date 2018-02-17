@@ -4,8 +4,18 @@
 
 #include "operand.h"
 
+Operand::Operand() {
+  value_ = NULL;
+  type_ = EMPTY_OPERAND;
+}
+
 Operand::Operand(std::string operand_definition) {
   try {
+
+    if (operand_definition.empty()) {
+      throw std::length_error("operand definition can't be empty");
+    }
+
     switch (operand_definition[0]) {
       case '=':
         type_ = CONSTANT;
@@ -25,7 +35,6 @@ Operand::Operand(std::string operand_definition) {
   }
 }
 
-
 Operand::~Operand() {
   type_ = CONSTANT;
   value_ = 0;
@@ -37,6 +46,10 @@ int Operand::get_value() const {
 
 OperandType Operand::get_type() const {
   return type_;
+}
+
+bool Operand::empty() const {
+  return type_ == EMPTY_OPERAND;
 }
 
 std::ostream &operator<<(std::ostream &os, const Operand &operand) {
