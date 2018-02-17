@@ -10,8 +10,8 @@ file(GLOB SOURCE_FILES "src/*.cpp")
 
 # Set data memory test files
 set(DATA_MEM_TEST test/test-main/data-main.cpp src/data-memory.cpp include/data-memory.h)
-set(RAM_TEST)
-set(ALU_TEST)
+set(OPERAND_TEST test/test-main/operand-main.cpp include/operand.h src/operand.cpp)
 
 add_executable(ram_simulator ${SOURCE_FILES})
 add_executable(data-mem-test ${DATA_MEM_TEST})
+add_executable(operand_test ${OPERAND_TEST})
