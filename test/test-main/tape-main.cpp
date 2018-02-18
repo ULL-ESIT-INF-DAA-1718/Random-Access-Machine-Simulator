@@ -3,8 +3,7 @@
 //
 
 #include <iostream>
-#include "input-tape.h"
-#include "output-tape.h"
+#include "tape-unit.h"
 
 int main(void) {
 
@@ -62,4 +61,16 @@ int main(void) {
   }
 
   std::cout << ot;
+
+  TapeUnit tu("../test/tape_test/test1.tape", "../test/tape_test/otest1.tape");
+  for (int i = 0; i < 20; ++i) {
+    tu.write(i);
+  }
+
+  for (int i = 0; i < 10; ++i) {
+    tu.read();
+  }
+
+  std::cout << tu;
+
 }

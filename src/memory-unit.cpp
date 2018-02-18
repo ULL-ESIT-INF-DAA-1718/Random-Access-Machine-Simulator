@@ -80,13 +80,13 @@ unsigned MemoryUnit::get_original_program_line(int memory_program_line) const {
 std::ostream &operator<<(std::ostream &os, const MemoryUnit &unit) {
 
   os << '\t' << "MEMORY UNIT" << '\n';
-  os << std::setfill('-') << std::setw(20) << '\n';
+  os << std::setfill('=') << std::setw(20) << '\n';
 
-  os << "➞ " << "data memory" << '\n';
+  os << "• " << "data memory" << '\n';
   os << unit.data_memory_;
   os << std::setfill('-') << std::setw(20) << '\n';
 
-  os << "➞ " << "program memory" << '\n';
+  os << "• " << "program memory" << '\n';
   os << unit.program_memory_;
   os << std::setfill('-') << std::setw(20) << '\n';
 
