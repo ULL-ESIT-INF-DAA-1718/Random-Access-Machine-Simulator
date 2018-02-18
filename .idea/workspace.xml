@@ -17,16 +17,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95c2ee2b-5bbf-472e-b7e8-e636d753abd6" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/include/memory-unit.h" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/memory-unit.cpp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/test-main/mem-unit.cpp" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change beforePath="$PROJECT_DIR$/include/program-memory.h" afterPath="$PROJECT_DIR$/include/program-memory.h" />
-      <change beforePath="$PROJECT_DIR$/src/instruction.cpp" afterPath="$PROJECT_DIR$/src/instruction.cpp" />
-      <change beforePath="$PROJECT_DIR$/src/program-memory.cpp" afterPath="$PROJECT_DIR$/src/program-memory.cpp" />
-      <change beforePath="$PROJECT_DIR$/test/tests_ram/test1.ram" afterPath="$PROJECT_DIR$/test/tests_ram/test1.ram" />
-      <change beforePath="$PROJECT_DIR$/test/tests_ram/test7.ram" afterPath="$PROJECT_DIR$/test/tests_ram/test7.ram" />
+      <change beforePath="$PROJECT_DIR$/include/memory-unit.h" afterPath="$PROJECT_DIR$/include/memory-unit.h" />
+      <change beforePath="$PROJECT_DIR$/src/memory-unit.cpp" afterPath="$PROJECT_DIR$/src/memory-unit.cpp" />
+      <change beforePath="$PROJECT_DIR$/test/test-main/mem-unit.cpp" afterPath="$PROJECT_DIR$/test/test-main/mem-unit.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,11 +33,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="22" column="44" lean-forward="false" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+            <state relative-caret-position="360">
+              <caret line="15" column="254" lean-forward="false" selection-start-line="15" selection-start-column="254" selection-end-line="15" selection-end-column="254" />
               <folding />
             </state>
           </provider>
@@ -52,20 +46,21 @@
       <file leaf-file-name="mem-unit.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test-main/mem-unit.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="962">
-              <caret line="75" column="56" lean-forward="false" selection-start-line="75" selection-start-column="56" selection-end-line="75" selection-end-column="56" />
+            <state relative-caret-position="720">
+              <caret line="108" column="46" lean-forward="false" selection-start-line="108" selection-start-column="46" selection-end-line="108" selection-end-column="46" />
               <folding>
                 <element signature="e#56#75#0" expanded="true" />
+                <element signature="e#168#2239#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="memory-unit.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="memory-unit.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/memory-unit.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="19" column="76" lean-forward="false" selection-start-line="19" selection-start-column="76" selection-end-line="19" selection-end-column="76" />
+            <state relative-caret-position="2880">
+              <caret line="120" column="68" lean-forward="false" selection-start-line="120" selection-start-column="68" selection-end-line="120" selection-end-column="68" />
               <folding>
                 <element signature="e#129#147#0" expanded="true" />
               </folding>
@@ -76,14 +71,29 @@
       <file leaf-file-name="memory-unit.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/memory-unit.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="68" column="67" lean-forward="false" selection-start-line="68" selection-start-column="67" selection-end-line="68" selection-end-column="67" />
+            <state relative-caret-position="432">
+              <caret line="70" column="78" lean-forward="false" selection-start-line="70" selection-start-column="78" selection-end-line="70" selection-end-column="78" />
               <folding>
                 <element signature="e#82#1310#0" expanded="false" />
-                <element signature="e#1312#1899#0" expanded="false" />
-                <element signature="e#1901#2850#0" expanded="false" />
-                <element signature="e#2309#2834#0" expanded="false" />
+                <element signature="e#1342#1429#0" expanded="false" />
+                <element signature="e#1431#1526#0" expanded="false" />
+                <element signature="e#1528#1633#0" expanded="false" />
+                <element signature="e#1635#1853#0" expanded="false" />
+                <element signature="e#1855#2167#0" expanded="false" />
+                <element signature="e#2169#3118#0" expanded="false" />
+                <element signature="e#2577#3102#0" expanded="false" />
+                <element signature="e#3140#3727#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test1.ram" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/tests_ram/test1.ram">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -121,7 +131,6 @@
         <option value="$PROJECT_DIR$/test/test-main/prog-main.cpp" />
         <option value="$PROJECT_DIR$/src/data-memory.cpp" />
         <option value="$PROJECT_DIR$/include/data-memory.h" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/prgram-memory.cpp" />
         <option value="$PROJECT_DIR$/test/tests_ram/test1.ram" />
         <option value="$PROJECT_DIR$/include/program-memory.h" />
@@ -134,9 +143,10 @@
         <option value="$PROJECT_DIR$/test/error_test_ram/error_test2.ram" />
         <option value="$PROJECT_DIR$/test/error_test_ram/error_test3.ram" />
         <option value="$PROJECT_DIR$/test/error_test_ram/error_test4.ram" />
-        <option value="$PROJECT_DIR$/test/test-main/mem-unit.cpp" />
         <option value="$PROJECT_DIR$/src/memory-unit.cpp" />
+        <option value="$PROJECT_DIR$/test/test-main/mem-unit.cpp" />
         <option value="$PROJECT_DIR$/include/memory-unit.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
       </list>
     </option>
   </component>
@@ -182,23 +192,7 @@
             <path>
               <item name="ram_simulator" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="practica-1" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ram_simulator" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="practica-1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ram_simulator" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="practica-1" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ram_simulator" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="practica-1" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="error_test_ram" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -463,12 +457,12 @@
       <workItem from="1518876627178" duration="4923000" />
       <workItem from="1518889098405" duration="18987000" />
       <workItem from="1518949956505" duration="9418000" />
-      <workItem from="1518972725915" duration="3383000" />
+      <workItem from="1518972725915" duration="8370000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45326000" />
+    <option name="totallyTimeSpent" value="50313000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -512,7 +506,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -523,6 +517,7 @@
           <caret line="16" column="35" lean-forward="false" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
           <folding>
             <element signature="e#56#75#0" expanded="true" />
+            <element signature="e#168#2239#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -551,9 +546,14 @@
           <caret line="80" column="18" lean-forward="false" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
           <folding>
             <element signature="e#82#1310#0" expanded="false" />
-            <element signature="e#1312#1899#0" expanded="false" />
-            <element signature="e#1901#2850#0" expanded="false" />
-            <element signature="e#2309#2834#0" expanded="false" />
+            <element signature="e#1342#1429#0" expanded="false" />
+            <element signature="e#1431#1526#0" expanded="false" />
+            <element signature="e#1528#1633#0" expanded="false" />
+            <element signature="e#1635#1853#0" expanded="false" />
+            <element signature="e#1855#2167#0" expanded="false" />
+            <element signature="e#2169#3118#0" expanded="false" />
+            <element signature="e#2577#3102#0" expanded="false" />
+            <element signature="e#3140#3727#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -681,6 +681,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="28" column="2" lean-forward="false" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -734,13 +735,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test-main/instruction-test.cpp" />
     <entry file="file://$PROJECT_DIR$/include/control-unit.h" />
-    <entry file="file://$PROJECT_DIR$/test/test-main/data-main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/operand.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -761,6 +755,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
           <caret line="82" column="2" lean-forward="true" selection-start-line="82" selection-start-column="2" selection-end-line="88" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -794,39 +789,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data-memory.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="54" column="12" lean-forward="true" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
-          <folding>
-            <element signature="e#27#96#0" expanded="false" />
-            <element signature="e#98#172#0" expanded="false" />
-            <element signature="e#174#588#0" expanded="false" />
-            <element signature="e#590#1110#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/data-memory.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="55" column="2" lean-forward="false" selection-start-line="55" selection-start-column="2" selection-end-line="62" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test-main/prog-main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="22" column="44" lean-forward="false" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
-          <folding />
+          <folding>
+            <element signature="e#56#75#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -834,27 +803,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/program-memory.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-          <folding>
-            <element signature="e#120#180#0" expanded="false" />
-            <element signature="e#182#551#0" expanded="false" />
-            <element signature="e#553#655#0" expanded="false" />
-            <element signature="e#725#943#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/program-memory.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="52" column="2" lean-forward="false" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -921,14 +869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/tests_ram/test1.ram">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/tests_ram/test7.ram">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="574">
@@ -961,13 +901,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test-main/mem-unit.cpp">
+    <entry file="file://$PROJECT_DIR$/src/program-memory.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="962">
-          <caret line="75" column="56" lean-forward="false" selection-start-line="75" selection-start-column="56" selection-end-line="75" selection-end-column="56" />
+        <state relative-caret-position="240">
+          <caret line="12" column="52" lean-forward="true" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
           <folding>
-            <element signature="e#56#75#0" expanded="true" />
+            <element signature="e#120#180#0" expanded="false" />
+            <element signature="e#553#655#0" expanded="false" />
+            <element signature="e#725#943#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/program-memory.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="902">
+          <caret line="52" column="2" lean-forward="false" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -979,26 +929,88 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/test-main/data-main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data-memory.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="12" column="41" lean-forward="false" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+          <folding>
+            <element signature="e#27#96#0" expanded="false" />
+            <element signature="e#98#172#0" expanded="false" />
+            <element signature="e#174#588#0" expanded="false" />
+            <element signature="e#590#1110#0" expanded="false" />
+            <element signature="e#1112#1450#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/tests_ram/test1.ram">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/data-memory.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="55" column="2" lean-forward="false" selection-start-line="55" selection-start-column="2" selection-end-line="62" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/memory-unit.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="68" column="67" lean-forward="false" selection-start-line="68" selection-start-column="67" selection-end-line="68" selection-end-column="67" />
+        <state relative-caret-position="432">
+          <caret line="70" column="78" lean-forward="false" selection-start-line="70" selection-start-column="78" selection-end-line="70" selection-end-column="78" />
           <folding>
             <element signature="e#82#1310#0" expanded="false" />
-            <element signature="e#1312#1899#0" expanded="false" />
-            <element signature="e#1901#2850#0" expanded="false" />
-            <element signature="e#2309#2834#0" expanded="false" />
+            <element signature="e#1342#1429#0" expanded="false" />
+            <element signature="e#1431#1526#0" expanded="false" />
+            <element signature="e#1528#1633#0" expanded="false" />
+            <element signature="e#1635#1853#0" expanded="false" />
+            <element signature="e#1855#2167#0" expanded="false" />
+            <element signature="e#2169#3118#0" expanded="false" />
+            <element signature="e#2577#3102#0" expanded="false" />
+            <element signature="e#3140#3727#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test-main/mem-unit.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="108" column="46" lean-forward="false" selection-start-line="108" selection-start-column="46" selection-end-line="108" selection-end-column="46" />
+          <folding>
+            <element signature="e#56#75#0" expanded="true" />
+            <element signature="e#168#2239#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/include/memory-unit.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="19" column="76" lean-forward="false" selection-start-line="19" selection-start-column="76" selection-end-line="19" selection-end-column="76" />
+        <state relative-caret-position="2880">
+          <caret line="120" column="68" lean-forward="false" selection-start-line="120" selection-start-column="68" selection-end-line="120" selection-end-column="68" />
           <folding>
             <element signature="e#129#147#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="254" lean-forward="false" selection-start-line="15" selection-start-column="254" selection-end-line="15" selection-end-column="254" />
+          <folding />
         </state>
       </provider>
     </entry>

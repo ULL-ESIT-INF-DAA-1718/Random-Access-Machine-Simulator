@@ -7,7 +7,7 @@
 
 int main() {
   //std::cout << "Memory Unit tests" << std::endl;
-
+  /*
   try {
 
     MemoryUnit a0("../test/tests_ram/test1.ram");
@@ -85,5 +85,26 @@ int main() {
     std::cerr << "Error at main line n: ";
     std::cerr << ia.what() << '\n';
   }
+  */
 
+  MemoryUnit mem("../test/tests_ram/test1.ram");
+  std::cout << mem << std::endl;
+
+  mem.write_data(3, 6);
+  std::cout << mem << std::endl;
+
+  std::cout << mem.read_data(3) << std::endl;
+  try {
+    std::cout << mem.read_data(3) << '\n';
+  }
+  catch (std::domain_error &de) {
+    std::cerr << de.what();
+  }
+
+  mem.write_data(890, 90);
+  std::cout << mem << std::endl;
+
+  std::cout << mem.read_instruction(93) << std::endl;
+  std::cout << mem.get_program_pos("FIN") << '\n';
+  std::cout << mem.get_original_program_line(-78) << '\n';
 }

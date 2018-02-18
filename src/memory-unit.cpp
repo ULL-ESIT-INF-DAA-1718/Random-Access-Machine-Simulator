@@ -45,24 +45,35 @@ MemoryUnit::MemoryUnit(const std::string &program_file_path) {
   }
 }
 
-bool MemoryUnit::process_instruction(const std::string instruction) {
-  if (instruction[0] != COMMENT_DELIMITER) {
-    std::string instruction_tag;
-    Instruction ins(instruction, &instruction_tag);
+MemoryUnit::~MemoryUnit() {}
 
-    program_memory_.insert_instruction(ins);
+int MemoryUnit::read_data(int position) const {
+  return data_memory_.read(position);
+}
 
-    if (!instruction_tag.empty()) {
-      if (tag_dictionary_.find(instruction_tag) == tag_dictionary_.end()) {
-        tag_dictionary_[instruction_tag] = program_memory_.size() - 1;
-      } else {
-        throw std::invalid_argument("program can't have duplicated tags.");
-      }
-    }
+void MemoryUnit::write_data(int position, int value) {
+  data_memory_.write(position, value);
+}
 
-    return true;
-  } else {
-    return false;
+Instruction MemoryUnit::read_instruction(int position) const {
+  return program_memory_.read(position);
+}
+
+unsigned MemoryUnit::get_program_pos(std::string tag) const {
+  try {
+    return tag_dictionary_.at(tag);
+  }
+  catch (std::out_of_range &oor) {
+    throw std::invalid_argument(tag + " is not an specified tag.");
+  }
+}
+
+unsigned MemoryUnit::get_original_program_line(int memory_program_line) const {
+  try {
+    return program_lines_dictionary_.at(memory_program_line);
+  }
+  catch (std::out_of_range &oor) {
+    throw std::invalid_argument(std::to_string(memory_program_line) + " is not a valid position on program memory.");
   }
 }
 
@@ -96,4 +107,27 @@ std::ostream &operator<<(std::ostream &os, const MemoryUnit &unit) {
   */
 
   return os;
+}
+
+// PRIVATE METHODS
+
+bool MemoryUnit::process_instruction(const std::string instruction) {
+  if (instruction[0] != COMMENT_DELIMITER) {
+    std::string instruction_tag;
+    Instruction ins(instruction, &instruction_tag);
+
+    program_memory_.insert_instruction(ins);
+
+    if (!instruction_tag.empty()) {
+      if (tag_dictionary_.find(instruction_tag) == tag_dictionary_.end()) {
+        tag_dictionary_[instruction_tag] = program_memory_.size() - 1;
+      } else {
+        throw std::invalid_argument("program can't have duplicated tags.");
+      }
+    }
+
+    return true;
+  } else {
+    return false;
+  }
 }
