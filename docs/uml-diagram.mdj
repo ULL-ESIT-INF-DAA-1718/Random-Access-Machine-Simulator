@@ -1719,7 +1719,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "-type_: Opcode",
+											"text": "-opcode_: Opcode",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -14114,7 +14114,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFhinb/OzMfFF8="
 							},
-							"name": "type_",
+							"name": "opcode_",
 							"visibility": "private",
 							"isStatic": false,
 							"isLeaf": false,
@@ -16237,7 +16237,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFho49V22Ht6tM="
 							},
-							"name": "get_type",
+							"name": "get_opcode",
 							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
