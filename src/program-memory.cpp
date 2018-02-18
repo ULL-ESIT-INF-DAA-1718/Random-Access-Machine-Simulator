@@ -28,6 +28,10 @@ void ProgramMemory::insert_instruction(const Instruction &instr) {
   instructions_.push_back(instr);
 }
 
+int ProgramMemory::size() const {
+  return instructions_.size();
+}
+
 std::ostream &operator<<(std::ostream &os, const ProgramMemory &memory) {
   int i = 0;
   for (auto instruction: memory.instructions_) {

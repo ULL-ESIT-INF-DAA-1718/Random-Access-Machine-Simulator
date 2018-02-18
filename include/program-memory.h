@@ -50,6 +50,8 @@ class ProgramMemory {
    */
   void insert_instruction(const Instruction &instr);
 
+  int size() const;
+
   /**
    * @brief Friend method that prints the memory into a stream.
    *        Only used registers are printed.
