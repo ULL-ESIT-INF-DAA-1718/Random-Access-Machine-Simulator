@@ -14,7 +14,7 @@ set(OPERAND_TEST test/test-main/operand-main.cpp include/operand.h src/operand.c
 set(INSTRUCTION_TEST test/test-main/instruction-main.cpp include/instruction.h src/instruction.cpp include/operand.h src/operand.cpp)
 set(PROG_MEM_TEST include/instruction.h src/instruction.cpp include/operand.h src/operand.cpp test/test-main/prog-main.cpp include/program-memory.h src/program-memory.cpp)
 set(MEM_UNIT_TEST include/instruction.h src/instruction.cpp include/operand.h src/operand.cpp include/program-memory.h src/program-memory.cpp src/data-memory.cpp include/data-memory.h test/test-main/mem-unit.cpp include/memory-unit.h src/memory-unit.cpp)
-set(TAPE_UNIT_TEST include/input-tape.h src/input-tape.cpp test/test-main/tape-main.cpp)
+set(TAPE_UNIT_TEST include/input-tape.h src/input-tape.cpp test/test-main/tape-main.cpp include/output-tape.h src/output-tape.cpp)
 
 add_executable(ram_simulator ${SOURCE_FILES})
 add_executable(data-mem-test ${DATA_MEM_TEST})
