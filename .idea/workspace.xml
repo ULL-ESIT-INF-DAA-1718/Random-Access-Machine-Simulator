@@ -4,12 +4,12 @@
     <generated>
       <config projectName="ram_simulator" targetName="operand_test" />
       <config projectName="ram_simulator" targetName="instruction_test" />
+      <config projectName="ram_simulator" targetName="prog_mem_test" />
       <config projectName="ram_simulator" targetName="mem_unit_test" />
       <config projectName="ram_simulator" targetName="ram_simulator" />
       <config projectName="ram_simulator" targetName="data-mem-test" />
       <config projectName="ram_simulator" targetName="tape_unit_test" />
       <config projectName="ram_simulator" targetName="alu_unit_test" />
-      <config projectName="ram_simulator" targetName="prog_mem_test" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -36,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -456,7 +456,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60131000" />
+    <option name="totallyTimeSpent" value="60144000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -945,7 +945,7 @@
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
