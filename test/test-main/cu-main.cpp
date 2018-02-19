@@ -6,12 +6,9 @@
 #include "control-unit.h"
 
 int main(void) {
-  std::cout << "Control Unit test" << std::endl;
+  //std::cout << "Control Unit test" << std::endl;
 
-  MemoryUnit mem("../test/tests_ram/test1.ram");
-  TapeUnit tape("../test/tape_test/test1.tape", "../test/tape_test/otest.tape");
-  unsigned ip = 0;
-
+  /*
   int line_counter = 28;
   Instruction ins("LOAD -3");
   try {
@@ -109,5 +106,18 @@ int main(void) {
   }
   catch (std::logic_error &le) {
 
+  }
+   */
+
+  try {
+    MemoryUnit mem("../test/tests_ram/test1.ram");
+    TapeUnit tape("../test/tape_test/test1.tape", "../test/tape_test/otest.tape");
+    unsigned ip = 0;
+
+    ControlUnit cu(&mem, nullptr, &ip);
+
+  }
+  catch (std::invalid_argument &ia) {
+    std::cerr << "Error line 117: " << ia.what() << '\n';
   }
 }

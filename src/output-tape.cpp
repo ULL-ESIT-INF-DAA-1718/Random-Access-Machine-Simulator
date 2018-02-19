@@ -2,12 +2,14 @@
 // Created by Cristian Abrante Dorta on 18/2/18.
 //
 
+#include <iostream>
 #include "output-tape.h"
 
 OutputTape::OutputTape(std::string out_file_path) :
 output_file_(out_file_path) {
   if (!output_file_.is_open()) {
-    throw std::invalid_argument("Error opening program file " + out_file_path);
+    std::cerr << "Error opening program file " + out_file_path << std::endl;
+    throw std::invalid_argument("error initializing output tape.");
   }
 }
 

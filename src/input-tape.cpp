@@ -14,7 +14,8 @@ InputTape::InputTape(std::string input_tape_file_path) {
       input_data_.push_back(tape_unit);
     }
   } else {
-    throw std::invalid_argument("Error opening program file " + input_tape_file_path);
+    std::cerr << "Error opening program file " + input_tape_file_path << std::endl;
+    throw std::invalid_argument("error initializing input tape.");
   }
 }
 

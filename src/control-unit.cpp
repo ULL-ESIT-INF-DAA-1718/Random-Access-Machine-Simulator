@@ -12,13 +12,16 @@ memory_unit_(memory_unit),
 tape_unit_(tape_unit),
 instruction_pointer_(instruction_pointer) {
   if (memory_unit_ == nullptr) {
-    // TODO: handle null pointer error.
+    std::cerr <<"Memory unit pointer can't be null." << '\n';
+    throw std::invalid_argument("error initializing control unit.");
   }
   if (tape_unit_ == nullptr) {
-    // TODO: handle null pointer error.
+    std::cerr << "Tape unit pointer can't be null." << '\n';
+    throw std::invalid_argument("error initializing control unit.");
   }
   if (instruction_pointer_ == nullptr) {
-    // TODO: handle null pointer error.
+    std::cerr << "Instruction pointer can't be null." << '\n';
+    throw std::invalid_argument("error initializing control unit.");
   }
 }
 
@@ -38,7 +41,6 @@ void ControlUnit::execute_instruction(const Instruction &instruction) {
       break;
     default:
       break;
-    // TODO: HANDLE WITH error instruction.
   }
 }
 
@@ -111,7 +113,6 @@ void ControlUnit::perform_memory_operation(const Instruction &instruction) {
       write_with_addressing(instruction.get_operand(), value_to_store);
     }
     default:
-      // TODO: Incorrect category error.
       break;
   }
 }
@@ -120,13 +121,21 @@ void ControlUnit::perform_memory_operation(const Instruction &instruction) {
 // TODO: error al dividir por 0.
 // TODO: operación no aritmética.
 void ControlUnit::perform_arithmetical_operation(const Instruction &instruction) {
-  int acc_value = memory_unit_->read_data(ACC);
-  int operand_value = read_with_addressing(instruction.get_operand());
 
-  int result = ArithmeticalLogicalUnit::perform_aritmetical_operation(acc_value,
-                                                                      operand_value,
-                                                                      instruction.get_opcode());
-  memory_unit_->write_data(ACC, result);
+  try {
+    int acc_value = memory_unit_->read_data(ACC);
+    int operand_value = read_with_addressing(instruction.get_operand());
+    int result = ArithmeticalLogicalUnit::perform_aritmetical_operation(acc_value,
+                                                                        operand_value,
+                                                                        instruction.get_opcode());
+    memory_unit_->write_data(ACC, result);
+  }
+  catch (std::domain_error &de) {
+    std::cerr << "Tr";
+    // TODO: Handle errors
+  }
+
+
 }
 
 void ControlUnit::perform_tape_operation(const Instruction &instruction) {
@@ -146,12 +155,16 @@ void ControlUnit::perform_tape_operation(const Instruction &instruction) {
   }
 }
 
-// TODO: Error with unused tags.
 void ControlUnit::perform_jump_operation(const Instruction &instruction) {
   int acc_value = memory_unit_->read_data(ACC);
-  if (ArithmeticalLogicalUnit::perform_logical_operation(acc_value,
-                                                         instruction.get_opcode())) {
-    *instruction_pointer_ = memory_unit_->get_program_pos(instruction.get_tag());
+  if (ArithmeticalLogicalUnit::perform_logical_operation(acc_value, instruction.get_opcode())) {
+    try {
+      *instruction_pointer_ = memory_unit_->get_program_pos(instruction.get_tag());
+    }
+    catch (std::invalid_argument &ia) {
+      std::cerr << instruction.get_tag() << " is undefined." << '\n';
+      throw std::invalid_argument("trying to jump to an undefined tag.");
+    }
   }
 }
 

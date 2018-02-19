@@ -13,6 +13,15 @@ class ControlUnit {
 
  public:
 
+  /**
+   * @brief Constructor of the class
+   *
+   * @param memory_unit
+   * @param tape_unit
+   * @param instruction_pointer
+   *
+   * @throw std::invalid_argument if any argument is nulptr.
+   */
   ControlUnit(MemoryUnit *memory_unit, TapeUnit *tape_unit, unsigned *instruction_pointer);
 
   void execute_instruction(const Instruction &instruction);
