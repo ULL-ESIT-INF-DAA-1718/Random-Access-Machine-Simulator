@@ -89,13 +89,17 @@ std::vector<std::string> Instruction::split_definition(const std::string &instru
   std::vector<std::string> instr_parts;
 
   for (auto instr_chr: instruction_definition) {
-    if (instr_chr != ' ' && instr_chr != '\t' && instr_chr != '\r') {
-      buffer += instr_chr;
+    if (instr_chr != ' ' && instr_chr != '\t' && instr_chr != '\r' && instr_chr != '#') {
+      if (instr_chr != '#') {
+        buffer += instr_chr;
+      }
     } else {
       if (!buffer.empty()) {
         instr_parts.push_back(uppercase_string(buffer));
         buffer.clear();
       }
+      if (instr_chr == '#')
+        break;
     }
   }
 

@@ -46,14 +46,17 @@ void ControlUnit::execute_instruction(const Instruction &instruction) {
 
 // PRIVATE METHODS
 
-// TODO: std::domain_error en el direccionamiento directo. pos < 0
-// TODO: std::domain_error en el direccionamiento indirecto. pos < 0
-int ControlUnit::read_with_addressing(Operand operand) const {
+int ControlUnit::read_with_addressing(const Instruction &instruction) const {
+  Operand operand = instruction.get_operand();
   switch (operand.get_type()) {
-
     case CONSTANT: return operand.get_value();
 
     case DIRECT_ADDR: {
+
+      if (instruction.get_opcode() == WRITE && operand.get_value() == ACC) {
+        throw std::domain_error("WRITE could not use the ACC as destiny register.");
+      }
+
       return memory_unit_->read_data(operand.get_value());
     }
 
@@ -66,21 +69,31 @@ int ControlUnit::read_with_addressing(Operand operand) const {
         throw std::domain_error("could not read at a negative memory position.");
       }
 
+      if (instruction.get_opcode() == WRITE && effective_position == ACC) {
+        std::cerr << "Indirect addressing produced error: ";
+        std::cerr << "R[" << operand.get_value()<< "] = ";
+        std::cerr << memory_unit_->read_data(operand.get_value()) << std::endl;
+        throw std::domain_error("WRITE could not use the ACC as destiny register.");
+      }
+
       return memory_unit_->read_data(effective_position);
     }
+    default:break;
   }
 }
 
-// TODO: error en la constante.
-// TODO: std::domain_error en el direccionamiento directo. pos < 0
-// TODO: std::domain_error en el direccionamiento indirecto. pos < 0
-void ControlUnit::write_with_addressing(Operand operand, int value) {
+void ControlUnit::write_with_addressing(const Instruction &instruction, int value) {
+  Operand operand = instruction.get_operand();
   switch (operand.get_type()) {
-
-    case CONSTANT: break;
-        // TODO: Handling write on constant error.
+    case CONSTANT:
+      throw std::invalid_argument("could not write into a constant value.");
 
     case DIRECT_ADDR: {
+
+      if (instruction.get_opcode() == READ && operand.get_value() == ACC) {
+        throw std::domain_error("READ could not use the ACC as destiny resgiter.");
+      }
+
       memory_unit_->write_data(operand.get_value(), value);
       break;
     }
@@ -94,9 +107,18 @@ void ControlUnit::write_with_addressing(Operand operand, int value) {
         std::cerr << memory_unit_->read_data(operand.get_value()) << std::endl;
         throw std::domain_error("could not write at a negative memory position.");
       }
+
+      if (instruction.get_opcode() == READ && effective_position == ACC) {
+        std::cerr << "Indirect addressing produced error: ";
+        std::cerr << "R[" << operand.get_value()<< "] = ";
+        std::cerr << memory_unit_->read_data(operand.get_value()) << std::endl;
+        throw std::domain_error("READ could not use the ACC as destiny resgiter.");
+      }
+
       memory_unit_->write_data(effective_position, value);
       break;
     }
+    default:break;
   }
 }
 
@@ -105,53 +127,42 @@ void ControlUnit::write_with_addressing(Operand operand, int value) {
 void ControlUnit::perform_memory_operation(const Instruction &instruction) {
   switch (instruction.get_opcode()) {
     case LOAD: {
-      int value_to_store = read_with_addressing(instruction.get_operand());
+      int value_to_store = read_with_addressing(instruction);
       memory_unit_->write_data(ACC, value_to_store);
+      break;
     }
     case STORE: {
       int value_to_store = memory_unit_->read_data(ACC);
-      write_with_addressing(instruction.get_operand(), value_to_store);
+      write_with_addressing(instruction, value_to_store);
+      break;
     }
     default:
       break;
   }
 }
 
-// TODO: error al leer operando. pos < 0
-// TODO: error al dividir por 0.
-// TODO: operación no aritmética.
 void ControlUnit::perform_arithmetical_operation(const Instruction &instruction) {
-
-  try {
-    int acc_value = memory_unit_->read_data(ACC);
-    int operand_value = read_with_addressing(instruction.get_operand());
-    int result = ArithmeticalLogicalUnit::perform_aritmetical_operation(acc_value,
-                                                                        operand_value,
-                                                                        instruction.get_opcode());
-    memory_unit_->write_data(ACC, result);
-  }
-  catch (std::domain_error &de) {
-    std::cerr << "Tr";
-    // TODO: Handle errors
-  }
-
-
+  int acc_value = memory_unit_->read_data(ACC);
+  int operand_value = read_with_addressing(instruction);
+  int result = ArithmeticalLogicalUnit::perform_aritmetical_operation(acc_value,
+                                                                      operand_value,
+                                                                      instruction.get_opcode());
+  memory_unit_->write_data(ACC, result);
 }
 
 void ControlUnit::perform_tape_operation(const Instruction &instruction) {
   switch (instruction.get_opcode()) {
     case READ: {
       int tape_value = tape_unit_->read();
-      write_with_addressing(instruction.get_operand(), tape_value);
+      write_with_addressing(instruction, tape_value);
       break;
     }
     case WRITE: {
-      // TODO: handling error with indirect addressing.
-      int value_to_write = read_with_addressing(instruction.get_operand());
+      int value_to_write = read_with_addressing(instruction);
       tape_unit_->write(value_to_write);
+      break;
     }
     default:break;
-      // TODO: handling error with incorrect operand.
   }
 }
 

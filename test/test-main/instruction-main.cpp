@@ -78,7 +78,7 @@ int main() {
     std::cerr << "Error on line 31: " << e.what() << std::endl;
   }
 
-  Instruction i0("fin: JUMP fin");
+  Instruction i0("fin: JUMP fin #comentario");
 
   std::cout << i0.get_opcode() << '\n';
   std::cout << i0.get_operand() << '\n';

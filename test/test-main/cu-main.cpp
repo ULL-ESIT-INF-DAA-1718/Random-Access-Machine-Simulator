@@ -114,10 +114,56 @@ int main(void) {
     TapeUnit tape("../test/tape_test/test1.tape", "../test/tape_test/otest.tape");
     unsigned ip = 0;
 
-    ControlUnit cu(&mem, nullptr, &ip);
+    ControlUnit cu(&mem, &tape, &ip);
 
+    /* ERROR EN LOAD.
+    cu.execute_instruction(Instruction("LOAD =-1"));
+    cu.execute_instruction(Instruction("STORE 2"));
+    cu.execute_instruction(Instruction("lOAD *2"));
+    std::cout << mem << std::endl;
+    */
+
+
+    //cu.execute_instruction(Instruction("STORE =-1"));
+    //std::cout << mem << std::endl;
+    //cu.execute_instruction(Instruction("STORE -1"));
+    //std::cout << mem << std::endl;
+    /*cu.execute_instruction(Instruction("LOAD =-1 #load into R0"));
+    cu.execute_instruction(Instruction("STORE 2"));
+    cu.execute_instruction(Instruction("StorE *2"));
+    std::cout << mem << std::endl;*/
+
+    /*
+    cu.execute_instruction(Instruction("LOAD =-1 #load into R0"));
+    cu.execute_instruction(Instruction("STORE 2"));
+    cu.execute_instruction(Instruction("ADD *2"));
+    std::cout << mem << std::endl;*/
+    /*
+    cu.execute_instruction(Instruction("DIV 2"));
+    std::cout << mem << std::endl;
+    */
+
+    /*
+    cu.execute_instruction(Instruction("READ 0"));
+    std::cout << mem << std::endl;
+    cu.execute_instruction(Instruction("READ *2"));
+    std::cout << mem << std::endl;
+    */
+
+
+    //cu.execute_instruction(Instruction("WRITE 0"));
+    //std::cout << mem << std::endl;
+    //cu.execute_instruction(Instruction("READ *2"));
+    //std::cout << mem << std::endl;
+
+    cu.execute_instruction(Instruction("JUMP FIN"));
+    std::cout << mem << std::endl;
+    std::cout << ip << std::endl;
   }
   catch (std::invalid_argument &ia) {
     std::cerr << "Error line 117: " << ia.what() << '\n';
+  }
+  catch (std::domain_error &de) {
+    std::cerr << "Error line 119: " << de.what() << '\n';
   }
 }

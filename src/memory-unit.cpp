@@ -16,12 +16,14 @@ MemoryUnit::MemoryUnit(const std::string &program_file_path) {
 
     while (std::getline(ifs, instruction)) {
 
+      // erases the first whitespaces.
       std::size_t pos = instruction.find_first_not_of(" \t\n\r");
 
       if (pos != std::string::npos) {
 
         instruction.erase(0, pos);
         try {
+          // process instruction.
           if (process_instruction(instruction)) {
             program_lines_dictionary_[program_memory_.size() - 1] = current_file_line;
           }

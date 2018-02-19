@@ -33,6 +33,15 @@ Operand::Operand(std::string operand_definition) {
   catch (std::invalid_argument &e) {
     throw std::invalid_argument("operand must start with a number");
   }
+
+  if (value_ < 0) {
+    if (type_ == DIRECT_ADDR) {
+      throw std::invalid_argument("direct addressing don't allow negative memory positions.");
+    }
+    if (type_ == INDIRECT_ADDR) {
+      throw std::invalid_argument("indirect addressing don't allow negative memory positions.");
+    }
+  }
 }
 
 Operand::~Operand() {
