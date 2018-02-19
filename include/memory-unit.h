@@ -12,6 +12,9 @@
 #include "data-memory.h"
 #include "program-memory.h"
 
+// position of ACC
+const int ACC = 0;
+
 /**
  * @author Cristian Abrante Dorta
  * @date 18 February 2018

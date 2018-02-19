@@ -16,7 +16,7 @@ set(PROG_MEM_TEST include/program-memory.h src/program-memory.cpp ${INSTRUCTION_
 set(MEM_UNIT_TEST include/memory-unit.h src/memory-unit.cpp ${PROG_MEM_TEST} ${DATA_MEM_TEST})
 set(TAPE_UNIT_TEST include/input-tape.h src/input-tape.cpp  include/output-tape.h src/output-tape.cpp include/tape-unit.h src/tape-unit.cpp)
 set(ALU_UNIT_TEST include/arithmetical-logical-unit.h src/arithmetical-logical-unit.cpp ${INSTRUCTION_TEST})
-set(CU_UNIT_TEST ${ALU_UNIT_TEST} ${MEM_UNIT_TEST} ${TAPE_UNIT_TEST})
+set(CU_UNIT_TEST ${ALU_UNIT_TEST} ${MEM_UNIT_TEST} ${TAPE_UNIT_TEST} include/control-unit.h src/control-unit.cpp)
 
 add_executable(ram_simulator ${SOURCE_FILES})
 add_executable(data-mem-test ${DATA_MEM_TEST}       test/test-main/data-main.cpp)

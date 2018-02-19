@@ -4,6 +4,7 @@
     <generated>
       <config projectName="ram_simulator" targetName="operand_test" />
       <config projectName="ram_simulator" targetName="instruction_test" />
+      <config projectName="ram_simulator" targetName="cu_unit_test" />
       <config projectName="ram_simulator" targetName="mem_unit_test" />
       <config projectName="ram_simulator" targetName="ram_simulator" />
       <config projectName="ram_simulator" targetName="data-mem-test" />
@@ -19,7 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95c2ee2b-5bbf-472e-b7e8-e636d753abd6" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/include/control-unit.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/control-unit.cpp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/test-main/cu-main.cpp" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
+      <change beforePath="$PROJECT_DIR$/include/memory-unit.h" afterPath="$PROJECT_DIR$/include/memory-unit.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,31 +38,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="28" column="79" lean-forward="false" selection-start-line="28" selection-start-column="79" selection-end-line="28" selection-end-column="79" />
+            <state relative-caret-position="624">
+              <caret line="26" column="81" lean-forward="false" selection-start-line="26" selection-start-column="81" selection-end-line="26" selection-end-column="81" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="arithmetical-logical-unit.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/arithmetical-logical-unit.h">
+      <file leaf-file-name="cu-main.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test-main/cu-main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="40" column="61" lean-forward="false" selection-start-line="40" selection-start-column="61" selection-end-line="40" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="alu-main.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test-main/alu-main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="877">
-              <caret line="45" column="58" lean-forward="false" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
+            <state relative-caret-position="367">
+              <caret line="59" column="43" lean-forward="false" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
               <folding>
                 <element signature="e#56#75#0" expanded="true" />
               </folding>
@@ -64,14 +60,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="arithmetical-logical-unit.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/arithmetical-logical-unit.cpp">
+      <file leaf-file-name="control-unit.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/include/control-unit.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="22" column="82" lean-forward="false" selection-start-line="22" selection-start-column="82" selection-end-line="22" selection-end-column="82" />
+            <state relative-caret-position="742">
+              <caret line="31" column="70" lean-forward="false" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
               <folding>
-                <element signature="e#96#669#0" expanded="false" />
-                <element signature="e#671#1008#0" expanded="false" />
+                <element signature="e#131#155#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="control-unit.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/control-unit.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="30" column="17" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+              <folding>
+                <element signature="e#83#570#0" expanded="false" />
+                <element signature="e#953#1822#0" expanded="false" />
+                <element signature="e#1824#2791#0" expanded="false" />
+                <element signature="e#2818#3310#0" expanded="false" />
+                <element signature="e#3312#3894#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -100,7 +111,6 @@
         <option value="$PROJECT_DIR$/src/data-memory.cc" />
         <option value="$PROJECT_DIR$/src/program-memory.h" />
         <option value="$PROJECT_DIR$/test/test-main/instruction-test.cpp" />
-        <option value="$PROJECT_DIR$/include/control-unit.h" />
         <option value="/Doxygen Fragment (data-memory.h:209).doxygen" />
         <option value="$PROJECT_DIR$/test/test-main/data-main.cpp" />
         <option value="$PROJECT_DIR$/src/operand.cpp" />
@@ -124,7 +134,6 @@
         <option value="$PROJECT_DIR$/test/error_test_ram/error_test3.ram" />
         <option value="$PROJECT_DIR$/test/error_test_ram/error_test4.ram" />
         <option value="$PROJECT_DIR$/test/test-main/mem-unit.cpp" />
-        <option value="$PROJECT_DIR$/include/memory-unit.h" />
         <option value="$PROJECT_DIR$/test/tape_test/test1.tape" />
         <option value="$PROJECT_DIR$/include/input-tape.h" />
         <option value="$PROJECT_DIR$/src/input-tape.cpp" />
@@ -138,6 +147,10 @@
         <option value="$PROJECT_DIR$/test/test-main/alu-main.cpp" />
         <option value="$PROJECT_DIR$/include/arithmetical-logical-unit.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/include/memory-unit.h" />
+        <option value="$PROJECT_DIR$/test/test-main/cu-main.cpp" />
+        <option value="$PROJECT_DIR$/src/control-unit.cpp" />
+        <option value="$PROJECT_DIR$/include/control-unit.h" />
       </list>
     </option>
   </component>
@@ -180,6 +193,27 @@
               <item name="ram_simulator" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="practica-1" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ram_simulator" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="practica-1" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ram_simulator" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="practica-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ram_simulator" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="practica-1" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ram_simulator" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="practica-1" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="tape_test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -216,11 +250,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.alu_unit_test">
+  <component name="RunManager" selected="Application.cu_unit_test">
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ram_simulator" RUN_TARGET_NAME="alu_unit_test" EXPLICIT_BUILD_TARGET_NAME="all">
       <envs />
     </configuration>
     <configuration name="alu_unit_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ram_simulator" TARGET_NAME="alu_unit_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ram_simulator" RUN_TARGET_NAME="alu_unit_test">
+      <envs />
+    </configuration>
+    <configuration name="cu_unit_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ram_simulator" TARGET_NAME="cu_unit_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ram_simulator" RUN_TARGET_NAME="cu_unit_test">
       <envs />
     </configuration>
     <configuration name="data-mem-test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ram_simulator" TARGET_NAME="data-mem-test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ram_simulator" RUN_TARGET_NAME="tape_unit_test">
@@ -420,16 +457,17 @@
       <option name="_new_target" value="&quot;.&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <list size="9">
+    <list size="10">
       <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
       <item index="1" class="java.lang.String" itemvalue="Application.alu_unit_test" />
-      <item index="2" class="java.lang.String" itemvalue="Application.data-mem-test" />
-      <item index="3" class="java.lang.String" itemvalue="Application.instruction_test" />
-      <item index="4" class="java.lang.String" itemvalue="Application.mem_unit_test" />
-      <item index="5" class="java.lang.String" itemvalue="Application.operand_test" />
-      <item index="6" class="java.lang.String" itemvalue="Application.prog_mem_test" />
-      <item index="7" class="java.lang.String" itemvalue="Application.ram_simulator" />
-      <item index="8" class="java.lang.String" itemvalue="Application.tape_unit_test" />
+      <item index="2" class="java.lang.String" itemvalue="Application.cu_unit_test" />
+      <item index="3" class="java.lang.String" itemvalue="Application.data-mem-test" />
+      <item index="4" class="java.lang.String" itemvalue="Application.instruction_test" />
+      <item index="5" class="java.lang.String" itemvalue="Application.mem_unit_test" />
+      <item index="6" class="java.lang.String" itemvalue="Application.operand_test" />
+      <item index="7" class="java.lang.String" itemvalue="Application.prog_mem_test" />
+      <item index="8" class="java.lang.String" itemvalue="Application.ram_simulator" />
+      <item index="9" class="java.lang.String" itemvalue="Application.tape_unit_test" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -452,11 +490,12 @@
       <workItem from="1518889098405" duration="18987000" />
       <workItem from="1518949956505" duration="9418000" />
       <workItem from="1518972725915" duration="17934000" />
+      <workItem from="1519023359376" duration="1092000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60149000" />
+    <option name="totallyTimeSpent" value="67254000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -476,18 +515,18 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4776564" sideWeight="0.49375" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44091362" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291262" sideWeight="0.50625" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44091362" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291262" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44091362" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286991" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39920557" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39920557" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969216" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -505,21 +544,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test-main/operand-main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/operand.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
@@ -531,15 +555,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-          <folding>
-            <element signature="e#78#142#0" expanded="false" />
-            <element signature="e#144#806#0" expanded="false" />
-            <element signature="e#808#865#0" expanded="false" />
-            <element signature="e#867#918#0" expanded="false" />
-            <element signature="e#920#977#0" expanded="false" />
-            <element signature="e#979#1043#0" expanded="false" />
-            <element signature="e#1045#1273#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -575,27 +590,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test-main/instruction-test.cpp" />
-    <entry file="file://$PROJECT_DIR$/include/control-unit.h" />
     <entry file="file://$PROJECT_DIR$/src/operand.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="50" column="28" lean-forward="false" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
-          <folding>
-            <element signature="e#78#142#0" expanded="false" />
-            <element signature="e#144#806#0" expanded="false" />
-            <element signature="e#808#865#0" expanded="false" />
-            <element signature="e#867#918#0" expanded="false" />
-            <element signature="e#920#977#0" expanded="false" />
-            <element signature="e#979#1043#0" expanded="false" />
-            <element signature="e#1045#1273#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/operand.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="82" column="2" lean-forward="true" selection-start-line="82" selection-start-column="2" selection-end-line="88" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -610,9 +608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#56#75#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -620,9 +615,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="e#56#75#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -723,11 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="12" column="52" lean-forward="true" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
-          <folding>
-            <element signature="e#120#180#0" expanded="false" />
-            <element signature="e#553#655#0" expanded="false" />
-            <element signature="e#725#943#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -753,20 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data-memory.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="12" column="41" lean-forward="false" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-          <folding>
-            <element signature="e#27#96#0" expanded="false" />
-            <element signature="e#98#172#0" expanded="false" />
-            <element signature="e#174#588#0" expanded="false" />
-            <element signature="e#590#1110#0" expanded="false" />
-            <element signature="e#1112#1450#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/tests_ram/test1.ram">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -774,28 +747,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test-main/mem-unit.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="108" column="46" lean-forward="false" selection-start-line="108" selection-start-column="46" selection-end-line="108" selection-end-column="46" />
-          <folding>
-            <element signature="e#56#75#0" expanded="false" />
-            <element signature="e#168#2239#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/tape_test/test1.tape">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
           <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/memory-unit.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="92" column="2" lean-forward="true" selection-start-line="92" selection-start-column="2" selection-end-line="99" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -810,9 +765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-482">
           <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-          <folding>
-            <element signature="e#127#145#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -820,10 +772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
           <caret line="33" column="66" lean-forward="false" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
-          <folding>
-            <element signature="e#447#617#0" expanded="false" />
-            <element signature="e#619#1337#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -853,32 +801,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/memory-unit.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="82" column="2" lean-forward="false" selection-start-line="82" selection-start-column="2" selection-end-line="82" selection-end-column="51" />
-          <folding>
-            <element signature="e#82#1310#0" expanded="false" />
-            <element signature="e#1342#1429#0" expanded="false" />
-            <element signature="e#1431#1526#0" expanded="false" />
-            <element signature="e#1528#1633#0" expanded="false" />
-            <element signature="e#1635#1853#0" expanded="false" />
-            <element signature="e#1855#2167#0" expanded="false" />
-            <element signature="e#2577#3102#0" expanded="false" />
-            <element signature="e#3140#3727#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tape-unit.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="18" column="65" lean-forward="false" selection-start-line="18" selection-start-column="65" selection-end-line="18" selection-end-column="65" />
-          <folding>
-            <element signature="e#213#266#0" expanded="false" />
-            <element signature="e#268#332#0" expanded="false" />
-            <element signature="e#334#637#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -886,10 +812,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
           <caret line="71" column="3" lean-forward="false" selection-start-line="71" selection-start-column="3" selection-end-line="71" selection-end-column="3" />
-          <folding>
-            <element signature="e#56#75#0" expanded="false" />
-            <element signature="e#216#917#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -897,40 +819,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/instruction.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="54" selection-end-column="3" />
-          <folding>
-            <element signature="e#2186#2335#0" expanded="false" />
-            <element signature="e#3352#3593#0" expanded="false" />
-            <element signature="e#3691#3809#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test-main/alu-main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="877">
-          <caret line="45" column="58" lean-forward="false" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
-          <folding>
-            <element signature="e#56#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/arithmetical-logical-unit.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="22" column="82" lean-forward="false" selection-start-line="22" selection-start-column="82" selection-end-line="22" selection-end-column="82" />
-          <folding>
-            <element signature="e#96#669#0" expanded="false" />
-            <element signature="e#671#1008#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -942,11 +830,106 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/test-main/alu-main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="877">
+          <caret line="45" column="58" lean-forward="false" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/instruction.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="e#2186#2335#0" expanded="false" />
+            <element signature="e#3352#3593#0" expanded="false" />
+            <element signature="e#3691#3809#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arithmetical-logical-unit.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="106" lean-forward="false" selection-start-line="6" selection-start-column="106" selection-end-line="6" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data-memory.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="12" column="41" lean-forward="false" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/operand.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1944">
+          <caret line="82" column="2" lean-forward="true" selection-start-line="82" selection-start-column="2" selection-end-line="88" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/memory-unit.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-411">
+          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/memory-unit.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="32" column="10" lean-forward="false" selection-start-line="32" selection-start-column="10" selection-end-line="33" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test-main/mem-unit.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="108" column="46" lean-forward="false" selection-start-line="108" selection-start-column="46" selection-end-line="108" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="28" column="79" lean-forward="false" selection-start-line="28" selection-start-column="79" selection-end-line="28" selection-end-column="79" />
+        <state relative-caret-position="624">
+          <caret line="26" column="81" lean-forward="false" selection-start-line="26" selection-start-column="81" selection-end-line="26" selection-end-column="81" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test-main/cu-main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="59" column="43" lean-forward="false" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
+          <folding>
+            <element signature="e#56#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/control-unit.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="30" column="17" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+          <folding>
+            <element signature="e#83#570#0" expanded="false" />
+            <element signature="e#953#1822#0" expanded="false" />
+            <element signature="e#1824#2791#0" expanded="false" />
+            <element signature="e#2818#3310#0" expanded="false" />
+            <element signature="e#3312#3894#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/control-unit.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="742">
+          <caret line="31" column="70" lean-forward="false" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
+          <folding>
+            <element signature="e#131#155#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
