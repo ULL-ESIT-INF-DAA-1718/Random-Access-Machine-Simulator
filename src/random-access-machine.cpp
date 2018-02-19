@@ -57,7 +57,7 @@ void RandomAccessMachine::run(bool debug) {
       std::cerr << '|' << current_file_line << " >> "<< instruction;
       std::cerr << '\n' << '\n';
 
-      throw std::invalid_argument("error running RAM machine.");
+      throw std::runtime_error("error running RAM machine.");
     }
     catch (std::domain_error &de) {
       unsigned current_file_line = memory_unit_.get_original_program_line(program_memory_line);
@@ -72,7 +72,7 @@ void RandomAccessMachine::run(bool debug) {
       std::cerr << '|' << current_file_line << " >> "<< instruction;
       std::cerr << '\n' << '\n';
 
-      throw std::invalid_argument("error running RAM machine.");
+      throw std::runtime_error("error running RAM machine.");
     }
   }
 
