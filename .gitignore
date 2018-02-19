@@ -13,3 +13,4 @@
 .project
 .DS_Store
 cmake-build-debug/*
+.idea/workspace.xml
