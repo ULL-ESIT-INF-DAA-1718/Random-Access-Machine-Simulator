@@ -176,6 +176,8 @@ void ControlUnit::perform_jump_operation(const Instruction &instruction) {
       std::cerr << instruction.get_tag() << " is undefined." << '\n';
       throw std::invalid_argument("trying to jump to an undefined tag.");
     }
+  } else {
+    *instruction_pointer_ = *instruction_pointer_ + 1;
   }
 }
 
