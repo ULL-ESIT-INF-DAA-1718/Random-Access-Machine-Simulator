@@ -30,6 +30,10 @@ class ControlUnit {
   void perform_memory_operation(const Instruction &instruction);
 
   void perform_arithmetical_operation(const Instruction &instruction);
+
+  void perform_tape_operation(const Instruction &instruction);
+
+  void perform_jump_operation(const Instruction &instruction);
 };
 
 #endif //RAM_SIMULATOR_CONTROL_UNIT_H

@@ -24,11 +24,18 @@ instruction_pointer_(instruction_pointer) {
 
 void ControlUnit::execute_instruction(const Instruction &instruction) {
   switch (instruction.get_category()) {
-    case MEMORY_OP:perform_memory_operation(instruction);
+    case MEMORY_OP:
+      perform_memory_operation(instruction);
       break;
-    case ARITHMETICAL_OP:perform_arithmetical_operation(instruction);
+    case ARITHMETICAL_OP:
+      perform_arithmetical_operation(instruction);
+      break;
+    case TAPE_OP:
+      perform_tape_operation(instruction);
       break;
     case JUMP_OP:
+      perform_jump_operation(instruction);
+      break;
     default:
       break;
     // TODO: HANDLE WITH error instruction.
@@ -111,6 +118,7 @@ void ControlUnit::perform_memory_operation(const Instruction &instruction) {
 
 // TODO: error al leer operando. pos < 0
 // TODO: error al dividir por 0.
+// TODO: operación no aritmética.
 void ControlUnit::perform_arithmetical_operation(const Instruction &instruction) {
   int acc_value = memory_unit_->read_data(ACC);
   int operand_value = read_with_addressing(instruction.get_operand());
@@ -119,6 +127,32 @@ void ControlUnit::perform_arithmetical_operation(const Instruction &instruction)
                                                                       operand_value,
                                                                       instruction.get_opcode());
   memory_unit_->write_data(ACC, result);
+}
+
+void ControlUnit::perform_tape_operation(const Instruction &instruction) {
+  switch (instruction.get_opcode()) {
+    case READ: {
+      int tape_value = tape_unit_->read();
+      write_with_addressing(instruction.get_operand(), tape_value);
+      break;
+    }
+    case WRITE: {
+      // TODO: handling error with indirect addressing.
+      int value_to_write = read_with_addressing(instruction.get_operand());
+      tape_unit_->write(value_to_write);
+    }
+    default:break;
+      // TODO: handling error with incorrect operand.
+  }
+}
+
+// TODO: Error with unused tags.
+void ControlUnit::perform_jump_operation(const Instruction &instruction) {
+  int acc_value = memory_unit_->read_data(ACC);
+  if (ArithmeticalLogicalUnit::perform_logical_operation(acc_value,
+                                                         instruction.get_opcode())) {
+    *instruction_pointer_ = memory_unit_->get_program_pos(instruction.get_tag());
+  }
 }
 
 

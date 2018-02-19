@@ -10,12 +10,12 @@ int main(void) {
 
   MemoryUnit mem("../test/tests_ram/test1.ram");
   TapeUnit tape("../test/tape_test/test1.tape", "../test/tape_test/otest.tape");
-  int ip = 0;
+  unsigned ip = 0;
 
   int line_counter = 28;
   Instruction ins("LOAD -3");
   try {
-    ControlUnit cu(&mem, &tape, nullptr);
+    ControlUnit cu(&mem, &tape, &ip);
     std::cout << mem;
 
     cu.execute_instruction(Instruction("LOAD =3"));
@@ -59,6 +59,47 @@ int main(void) {
 
     cu.execute_instruction(Instruction("DIV *3"));
     std::cout << mem;
+
+    cu.execute_instruction(Instruction("READ *3"));
+    std::cout << mem;
+    std::cout << tape;
+
+    cu.execute_instruction(Instruction("READ 3"));
+    std::cout << mem;
+    std::cout << tape;
+
+    cu.execute_instruction(Instruction("WRITE =38"));
+    std::cout << mem;
+    std::cout << tape;
+
+    cu.execute_instruction(Instruction("WRITE 3"));
+    std::cout << mem;
+    std::cout << tape;
+
+    cu.execute_instruction(Instruction("WRITE *4"));
+    std::cout << mem;
+    std::cout << tape;
+
+    cu.execute_instruction(Instruction("JUMP FIN"));
+    std::cout << "ip: " << ip << std::endl;
+
+    ip = 2;
+    cu.execute_instruction(Instruction("JZERO FIN"));
+    std::cout << "ip: " << ip << std::endl;
+
+    ip = 2;
+    cu.execute_instruction(Instruction("LOAD =0"));
+    cu.execute_instruction(Instruction("JZERO FIN"));
+    std::cout << "ip: " << ip << std::endl;
+
+    ip = 0;
+    cu.execute_instruction(Instruction("JGTZ FIN"));
+    std::cout << "ip: " << ip << std::endl;
+
+    ip = 2;
+    cu.execute_instruction(Instruction("LOAD =8"));
+    cu.execute_instruction(Instruction("JGTZ FIN"));
+    std::cout << "ip: " << ip << std::endl;
   }
   catch(std::domain_error &de) {
     std::cerr << "Error at line " << line_counter << ": ";

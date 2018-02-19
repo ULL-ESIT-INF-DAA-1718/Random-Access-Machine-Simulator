@@ -20,12 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95c2ee2b-5bbf-472e-b7e8-e636d753abd6" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/include/control-unit.h" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/control-unit.cpp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/test-main/cu-main.cpp" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change beforePath="$PROJECT_DIR$/include/memory-unit.h" afterPath="$PROJECT_DIR$/include/memory-unit.h" />
+      <change beforePath="$PROJECT_DIR$/include/control-unit.h" afterPath="$PROJECT_DIR$/include/control-unit.h" />
+      <change beforePath="$PROJECT_DIR$/src/control-unit.cpp" afterPath="$PROJECT_DIR$/src/control-unit.cpp" />
+      <change beforePath="$PROJECT_DIR$/test/tape_test/otest.tape" afterPath="$PROJECT_DIR$/test/tape_test/otest.tape" />
+      <change beforePath="$PROJECT_DIR$/test/test-main/cu-main.cpp" afterPath="$PROJECT_DIR$/test/test-main/cu-main.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cu-main.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="cu-main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/test-main/cu-main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="59" column="43" lean-forward="false" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
+            <state relative-caret-position="2372">
+              <caret line="99" column="47" lean-forward="false" selection-start-line="99" selection-start-column="47" selection-end-line="99" selection-end-column="47" />
               <folding>
                 <element signature="e#56#75#0" expanded="true" />
               </folding>
@@ -60,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="control-unit.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="control-unit.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/control-unit.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="742">
-              <caret line="31" column="70" lean-forward="false" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
+            <state relative-caret-position="358">
+              <caret line="15" column="61" lean-forward="false" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="68" />
               <folding>
                 <element signature="e#131#155#0" expanded="true" />
               </folding>
@@ -75,15 +74,26 @@
       <file leaf-file-name="control-unit.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/control-unit.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="30" column="17" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+            <state relative-caret-position="-566">
+              <caret line="36" column="6" lean-forward="false" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
               <folding>
                 <element signature="e#83#570#0" expanded="false" />
-                <element signature="e#953#1822#0" expanded="false" />
-                <element signature="e#1824#2791#0" expanded="false" />
-                <element signature="e#2818#3310#0" expanded="false" />
-                <element signature="e#3312#3894#0" expanded="false" />
+                <element signature="e#1097#1966#0" expanded="false" />
+                <element signature="e#1968#2935#0" expanded="false" />
+                <element signature="e#2962#3454#0" expanded="false" />
+                <element signature="e#3456#4072#0" expanded="false" />
+                <element signature="e#4074#4609#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test1.ram" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/tests_ram/test1.ram">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -148,9 +158,9 @@
         <option value="$PROJECT_DIR$/include/arithmetical-logical-unit.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/include/memory-unit.h" />
-        <option value="$PROJECT_DIR$/test/test-main/cu-main.cpp" />
-        <option value="$PROJECT_DIR$/src/control-unit.cpp" />
         <option value="$PROJECT_DIR$/include/control-unit.h" />
+        <option value="$PROJECT_DIR$/src/control-unit.cpp" />
+        <option value="$PROJECT_DIR$/test/test-main/cu-main.cpp" />
       </list>
     </option>
   </component>
@@ -213,6 +223,12 @@
               <item name="practica-1" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="tape_test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ram_simulator" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="practica-1" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="tests_ram" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -490,12 +506,12 @@
       <workItem from="1518889098405" duration="18987000" />
       <workItem from="1518949956505" duration="9418000" />
       <workItem from="1518972725915" duration="17934000" />
-      <workItem from="1519023359376" duration="1092000" />
+      <workItem from="1519023359376" duration="2923000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67254000" />
+    <option name="totallyTimeSpent" value="69085000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -539,7 +555,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -740,13 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/tests_ram/test1.ram">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/tape_test/test1.tape">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -874,6 +883,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-411">
           <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -899,36 +909,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test-main/cu-main.cpp">
+    <entry file="file://$PROJECT_DIR$/test/tests_ram/test1.ram">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="59" column="43" lean-forward="false" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
+        <state relative-caret-position="48">
+          <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/control-unit.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="15" column="61" lean-forward="false" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="68" />
           <folding>
-            <element signature="e#56#75#0" expanded="true" />
+            <element signature="e#131#155#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/control-unit.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="30" column="17" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+        <state relative-caret-position="-566">
+          <caret line="36" column="6" lean-forward="false" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
           <folding>
             <element signature="e#83#570#0" expanded="false" />
-            <element signature="e#953#1822#0" expanded="false" />
-            <element signature="e#1824#2791#0" expanded="false" />
-            <element signature="e#2818#3310#0" expanded="false" />
-            <element signature="e#3312#3894#0" expanded="false" />
+            <element signature="e#1097#1966#0" expanded="false" />
+            <element signature="e#1968#2935#0" expanded="false" />
+            <element signature="e#2962#3454#0" expanded="false" />
+            <element signature="e#3456#4072#0" expanded="false" />
+            <element signature="e#4074#4609#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/control-unit.h">
+    <entry file="file://$PROJECT_DIR$/test/test-main/cu-main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="31" column="70" lean-forward="false" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
+        <state relative-caret-position="2372">
+          <caret line="99" column="47" lean-forward="false" selection-start-line="99" selection-start-column="47" selection-end-line="99" selection-end-column="47" />
           <folding>
-            <element signature="e#131#155#0" expanded="true" />
+            <element signature="e#56#75#0" expanded="true" />
           </folding>
         </state>
       </provider>
