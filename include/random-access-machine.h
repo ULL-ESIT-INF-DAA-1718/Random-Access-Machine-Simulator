@@ -1,0 +1,8 @@
+//
+// Created by Cristian Abrante Dorta on 19/2/18.
+//
+
+#ifndef RAM_SIMULATOR_RANDOM_ACCESS_MACHINE_H
+#define RAM_SIMULATOR_RANDOM_ACCESS_MACHINE_H
+
+#endif //RAM_SIMULATOR_RANDOM_ACCESS_MACHINE_H
