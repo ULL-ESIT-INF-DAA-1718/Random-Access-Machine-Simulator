@@ -9,15 +9,44 @@
 #include "input-tape.h"
 #include "output-tape.h"
 
+/**
+ * @author Cristian Abrante Dorta
+ * @date 18 February 2018
+ *
+ * @class This class represents the tape unit of the RAM.
+ *
+ */
 class TapeUnit {
  public:
-
+  /**
+   * @brief constructor that takes two tapes files.
+   *
+   * @param in_file_path
+   * @param out_file_path
+   */
   TapeUnit(std::string in_file_path, std::string out_file_path);
 
+  /**
+   * @brief method that reads from input tape.
+   *
+   * @return data readed.
+   */
   int read();
 
+  /**
+   * @brief method that writes into the output tape.
+   *
+   * @param value
+   */
   void write(int value);
 
+  /**
+   * @brief Friend method that prints the tape unit into a stream.
+   *
+   * @param os
+   * @param unit
+   * @return the same stream os.
+   */
   friend std::ostream &operator<<(std::ostream &os, const TapeUnit &unit);
 
  private:
