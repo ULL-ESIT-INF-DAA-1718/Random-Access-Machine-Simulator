@@ -20,7 +20,7 @@ set(CU_UNIT_TEST ${ALU_UNIT_TEST} ${MEM_UNIT_TEST} ${TAPE_UNIT_TEST} include/con
 set(RAM_TEST ${CU_UNIT_TEST} include/random-access-machine.h src/random-access-machine.cpp)
 
 add_executable(ram_simulator ${SOURCE_FILES})
-add_executable(data-mem-test ${DATA_MEM_TEST}       test/test-main/data-main.cpp)
+add_executable(data-mem-test ${DATA_MEM_TEST}       test/test-main/data-main.cpp include/float-data-memory.h src/float-data-memory.cpp)
 add_executable(operand_test ${OPERAND_TEST}         test/test-main/operand-main.cpp)
 add_executable(instruction_test ${INSTRUCTION_TEST} test/test-main/instruction-main.cpp)
 add_executable(prog_mem_test ${PROG_MEM_TEST}       test/test-main/prog-main.cpp)
