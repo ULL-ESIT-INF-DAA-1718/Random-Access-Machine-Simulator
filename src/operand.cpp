@@ -20,15 +20,17 @@ Operand::Operand(std::string operand_definition) {
       case '=':
         type_ = CONSTANT;
         operand_definition.erase(operand_definition.begin());
+        value_ = std::stod(operand_definition);
         break;
       case '*':
         type_ = INDIRECT_ADDR;
         operand_definition.erase(operand_definition.begin());
+        value_ = std::stoi(operand_definition);
         break;
       default:
         type_ = DIRECT_ADDR;
+        value_ = std::stoi(operand_definition);
     }
-    value_ = std::stoi(operand_definition);
   }
   catch (std::invalid_argument &e) {
     throw std::invalid_argument("operand must start with a number");
@@ -49,7 +51,7 @@ Operand::~Operand() {
   value_ = 0;
 }
 
-int Operand::get_value() const {
+double Operand::get_value() const {
   return value_;
 }
 

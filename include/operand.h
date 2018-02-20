@@ -64,7 +64,7 @@ class Operand {
    *
    * @return numeric value of the operand.
    */
-  int get_value() const;
+  double get_value() const;
 
   /**
    * @brief gets the type of the operand.
@@ -92,7 +92,7 @@ class Operand {
  private:
 
   // Value of the operand.
-  int value_;
+  double value_;
 
   // Type of the operand.
   OperandType type_;
