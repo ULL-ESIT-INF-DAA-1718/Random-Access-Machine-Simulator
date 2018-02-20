@@ -44,7 +44,7 @@ class InputTape {
   /**
    * @brief read int data from the tape.
    */
-  int read();
+  double read();
 
   /**
    * @brief Friend method that prints the input tape into a stream.
@@ -61,7 +61,7 @@ class InputTape {
   unsigned head_;
 
   // data of the tape file
-  std::vector<int> input_data_;
+  std::vector<double> input_data_;
 };
 
 #endif //RAM_SIMULATOR_INPUT_TAPE_H

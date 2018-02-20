@@ -9,7 +9,7 @@ InputTape::InputTape(std::string input_tape_file_path) {
   std::ifstream ifs(input_tape_file_path);
 
   if (ifs.is_open()) {
-    int tape_unit;
+    double tape_unit;
     while (ifs >> tape_unit) {
       input_data_.push_back(tape_unit);
     }
@@ -21,7 +21,7 @@ InputTape::InputTape(std::string input_tape_file_path) {
 
 InputTape::~InputTape() {}
 
-int InputTape::read() {
+double InputTape::read() {
   unsigned tmp = head_;
   head_++;
 
@@ -34,7 +34,7 @@ int InputTape::read() {
 
 std::ostream &operator<<(std::ostream &os, const InputTape &tape) {
 
-  const int width = 4;
+  const int width = 8;
 
   size_t size = tape.input_data_.size();
   if (tape.head_ >= size) {

@@ -8,11 +8,11 @@ TapeUnit::TapeUnit(std::string in_file_path, std::string out_file_path) :
 input_tape_(in_file_path),
 output_tape_(out_file_path) {}
 
-int TapeUnit::read() {
+double TapeUnit::read() {
   return input_tape_.read();
 }
 
-void TapeUnit::write(int value) {
+void TapeUnit::write(double value) {
   output_tape_.write(value);
 }
 

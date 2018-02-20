@@ -31,14 +31,14 @@ class TapeUnit {
    *
    * @return data readed.
    */
-  int read();
+  double read();
 
   /**
    * @brief method that writes into the output tape.
    *
    * @param value
    */
-  void write(int value);
+  void write(double value);
 
   /**
    * @brief Friend method that prints the tape unit into a stream.

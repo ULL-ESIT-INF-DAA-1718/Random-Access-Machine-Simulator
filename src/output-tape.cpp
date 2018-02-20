@@ -21,13 +21,13 @@ OutputTape::~OutputTape() {
   output_file_.close();
 }
 
-void OutputTape::write(int value) {
+void OutputTape::write(double value) {
   output_data_.push_back(value);
 }
 
 std::ostream &operator<<(std::ostream &os, const OutputTape &tape) {
 
-  const int width = 4;
+  const int width = 8;
   const size_t size =  width * tape.output_data_.size() + 1;
 
   os << std::setfill('-') << std::setw(size) << '\n';

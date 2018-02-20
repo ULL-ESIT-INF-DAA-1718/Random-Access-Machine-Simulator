@@ -30,12 +30,12 @@ class OutputTape {
    *
    * @param value
    */
-  void write(int value);
+  void write(double value);
 
   friend std::ostream &operator<<(std::ostream &os, const OutputTape &tape);
  private:
   // Output data of the tape.
-  std::vector<int> output_data_;
+  std::vector<double> output_data_;
 
   // output stream.
   std::ofstream output_file_;

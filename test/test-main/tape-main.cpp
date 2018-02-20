@@ -9,7 +9,21 @@ int main(void) {
 
   std::cout << "Tape unit tests" << std::endl;
 
-  InputTape t("../test/tape_test/test1.tape");
+  //InputTape t("../test/tape_test/test1.tape");
+
+  //std::cout << t << std::endl;
+
+  //OutputTape ot("../test/tape_test/otest1.tape");
+
+  //std::cout << ot << std::endl;
+
+  //ot.write(45.98);
+  //std::cout << ot << std::endl;
+
+  //ot.write(48);
+  //std::cout << ot << std::endl;
+
+  TapeUnit tu("../test/tape_test/test1.tape", "../test/tape_test/otest1.tape");
 
   /*
   std::cout << t;
@@ -54,6 +68,7 @@ int main(void) {
   std::cout << t;
   */
 
+  /*
   OutputTape ot("../test/tape_test/otest1.tape");
 
   for (int i = 0; i < 30; ++i) {
@@ -63,7 +78,8 @@ int main(void) {
   std::cout << ot;
 
   TapeUnit tu("../test/tape_test/test1.tape", "../test/tape_test/otest1.tape");
-  for (int i = 0; i < 20; ++i) {
+  for (int i = 0; i < 5; ++i) {
+    tu.write(56.8);
     tu.write(i);
   }
 
@@ -72,5 +88,5 @@ int main(void) {
   }
 
   std::cout << tu;
-
+  */
 }

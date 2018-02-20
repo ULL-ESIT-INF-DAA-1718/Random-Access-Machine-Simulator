@@ -57,6 +57,14 @@ void MemoryUnit::write_data(int position, int value) {
   data_memory_.write(position, value);
 }
 
+double MemoryUnit::read_float_data(int position) const {
+  return float_memory_.read(position);
+}
+
+void MemoryUnit::write_float_data(int position, double value) {
+  float_memory_.write(position, value);
+}
+
 Instruction MemoryUnit::read_instruction(int position) const {
   return program_memory_.read(position);
 }
@@ -86,6 +94,10 @@ std::ostream &operator<<(std::ostream &os, const MemoryUnit &unit) {
 
   os << "• " << "data memory" << '\n';
   os << unit.data_memory_;
+  os << std::setfill('-') << std::setw(20) << '\n';
+
+  os << "• " << "float memory" << '\n';
+  os << unit.float_memory_;
   os << std::setfill('-') << std::setw(20) << '\n';
 
   os << "• " << "program memory" << '\n';
@@ -133,3 +145,5 @@ bool MemoryUnit::process_instruction(const std::string instruction) {
     return false;
   }
 }
+
+

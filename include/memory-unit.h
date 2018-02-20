@@ -11,6 +11,7 @@
 
 #include "data-memory.h"
 #include "program-memory.h"
+#include "float-data-memory.h"
 
 // position of ACC
 const int ACC = 0;
@@ -63,6 +64,10 @@ class MemoryUnit {
    */
   void write_data(int position, int value);
 
+  double read_float_data(int position) const;
+
+  void write_float_data(int position, double value);
+
   /**
    * @brief read instruction at a specified position.
    *
@@ -106,6 +111,8 @@ class MemoryUnit {
  private:
   // Data memory of the unit.
   DataMemory data_memory_;
+
+  FloatDataMemory float_memory_;
 
   // Program memory of the unit.
   ProgramMemory program_memory_;
