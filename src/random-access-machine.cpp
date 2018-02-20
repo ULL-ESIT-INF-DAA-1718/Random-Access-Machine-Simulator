@@ -45,7 +45,7 @@ void RandomAccessMachine::run(bool debug) {
 
     }
     catch (std::invalid_argument &ia) {
-      unsigned current_file_line = memory_unit_.get_original_program_line(program_memory_line);
+      unsigned current_file_line = memory_unit_.get_original_program_line(instruction_pointer_);
 
       if (debug)
         system("clear");
@@ -60,7 +60,7 @@ void RandomAccessMachine::run(bool debug) {
       throw std::runtime_error("error running RAM machine.");
     }
     catch (std::domain_error &de) {
-      unsigned current_file_line = memory_unit_.get_original_program_line(program_memory_line);
+      unsigned current_file_line = memory_unit_.get_original_program_line(instruction_pointer_);
 
       if (debug)
         system("clear");

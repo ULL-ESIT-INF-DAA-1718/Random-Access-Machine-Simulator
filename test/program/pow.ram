@@ -1,0 +1,41 @@
+# autor: Cristian Abrante Dorta
+# Programa RAM que calcula x^y
+# Si y < 0 entonces la cinta de salida contendrá un -1
+
+            read 1
+            read 2
+            load 2
+            JGTZ start
+            JZERO zero_exp
+            JUMP ltz_exp
+
+start:      sub =1
+            store 2
+
+            load 1
+            store 3
+
+while:      load 3
+            mul 1
+            store 3
+
+            # y = y -1
+            load 2
+            sub =1
+            store 2
+
+            JGTZ while
+            Jump fin
+
+# si el exponente es < 0
+ltz_exp:    load =-1
+            store 3
+            Jump fin
+
+# si el exponente es 0
+zero_exp:   load =1
+            store 3
+
+#final
+fin:        write 3
+            HALT

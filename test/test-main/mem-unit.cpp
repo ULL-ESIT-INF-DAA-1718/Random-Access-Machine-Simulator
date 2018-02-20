@@ -86,7 +86,7 @@ int main() {
     std::cerr << ia.what() << '\n';
   }
   */
-
+  /*
   MemoryUnit mem("../test/tests_ram/test1.ram");
   std::cout << mem << std::endl;
 
@@ -107,4 +107,9 @@ int main() {
   std::cout << mem.read_instruction(93) << std::endl;
   std::cout << mem.get_program_pos("FIN") << '\n';
   std::cout << mem.get_original_program_line(-78) << '\n';
+   */
+
+  MemoryUnit mem("../test/program/pow.ram");
+
+  std::cout << mem;
 }
